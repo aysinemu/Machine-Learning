@@ -43,7 +43,6 @@ fake_users = {
 async def root(request: Request):
     return templates.TemplateResponse("index.html", {"request": request})
 
-# Trang deepfake
 @app.get("/doctorcuong", response_class=HTMLResponse)
 async def doctorcuong(request: Request):
     return templates.TemplateResponse("doctorcuong.html", {"request": request})
