@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Heart Disease Analysis</title>
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 10px;
+      height: 100%;
+      font-family: sans-serif;
+      background-image: url('/static/images/heart.webp');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    h2 {
+      color: white;
+      margin-bottom: 20px;
+      text-shadow: 0 0 5px rgba(0,0,0,0.7);
+      text-align: center;
+    }
+
+    form {
+      background: rgba(255, 255, 255, 0.95);
+      padding: 30px 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      max-width: 500px;
+      width: 90%;
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+
+    form div {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 600;
+      color: #333;
+      word-wrap: break-word;
+    }
+
+    input[type="number"] {
+      width: 100%;
+      padding: 8px 10px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      transition: border-color 0.3s;
+    }
+
+    input[type="number"]:focus {
+      border-color: #007bff;
+      outline: none;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px 0;
+      font-size: 16px;
+      font-weight: bold;
+      background-color: #007bff;
+      border: none;
+      border-radius: 6px;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <h2>Input 13 Feature (Spaceless = 0)</h2>
+  <form action="/predict_web" method="post">
+      <div>
+        <i class="fas fa-h3    ">Note : Round numbers: if the decimal part is less than 0.5, round down (keep the integer part), if it is 0.5 or greater, round up</i>
+      </div>
+      <div>
+          <label>Feature 1: Age of the patient (in years)</label>
+          <input type="number" name="f1" />
+      </div>
+      <div>
+          <label>Feature 2: Gender of the patient (1 = male, 0 = female)</label>
+          <input type="number" name="f2" />
+      </div>
+      <div>
+          <label>Feature 3: Chest pain type (Rate 1-4)</label>
+          <input type="number" name="f3" />
+      </div>
+      <div>
+          <label>Feature 4: Resting blood pressure (mm Hg)</label>
+          <input type="number" name="f4" />
+      </div>
+      <div>
+          <label>Feature 5: Serum cholesterol level (mg/dl)</label>
+          <input type="number" name="f5" />
+      </div>
+      <div>
+          <label>Feature 6: Fasting blood sugar > 120 mg/dl (1 = True, 0 = False)</label>
+          <input type="number" name="f6" />
+      </div>
+      <div>
+          <label>Feature 7: Resting electrocardiographic results (0: normal, 1: ST-T wave abnormality, 2: LVH)</label>
+          <input type="number" name="f7" />
+      </div>
+      <div>
+          <label>Feature 8: Maximum heart rate achieved (bpm)</label>
+          <input type="number" name="f8" />
+      </div>
+      <div>
+          <label>Feature 9: Exercise induced angina (1 = yes, 0 = no)</label>
+          <input type="number" name="f9" />
+      </div>
+      <div>
+          <label>Feature 10: ST depression induced by exercise relative to rest</label>
+          <input type="number" name="f10" />
+      </div>
+      <div>
+          <label>Feature 11: Slope of the peak exercise ST segment (1 = upsloping, 2 = flat, 3 = downsloping)</label>
+          <input type="number" name="f11" />
+      </div>
+      <div>
+          <label>Feature 12: Number of major vessels (0-3) colored by fluoroscopy</label>
+          <input type="number" name="f12" />
+      </div>
+      <div>
+          <label>Feature 13: Thalassemia (3 = normal, 6 = fixed defect, 7 = reversible defect)</label>
+          <input type="number" name="f13" />
+      </div>
+      <button type="submit">Predict</button>
+  </form>
+</body>
+</html>

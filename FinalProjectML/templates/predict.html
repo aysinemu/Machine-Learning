@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Heart Disease Analysis</title>
+  <style>
+    html {
+      height: 100%;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      background-image: url('/static/images/heart.webp');
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+    body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 20px;
+      color: red;
+      text-shadow: 0 0 5px rgba(0,0,0,0.7);
+      background: transparent;
+      text-align: center;
+      padding: 20px;
+    }
+    h1 {
+      margin: 0;
+    }
+    .note {
+      font-style: italic;
+      max-width: 600px;
+      line-height: 1.6;
+    }
+    a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: rgba(255, 255, 255, 0.3);
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    a:hover {
+      background-color: rgba(255, 255, 255, 0.6);
+      color: #222;
+    }
+  </style>
+</head>
+<body>
+  <h1>Prediction</h1>
+  <h2 class="note">
+    "The above result is based solely on an unsupervised learning algorithm, so the accuracy rate is only around 80–85%. However, if the result indicates a potential issue, I recommend that you go for a medical check-up just to be sure — it's better to be safe than sorry."
+  </h2>
+  <h1>{{ result }}</h1>
+  <a href="/doctorcuong">Quay lại</a>
+</body>
+</html>

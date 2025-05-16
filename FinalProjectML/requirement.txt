@@ -1,0 +1,12 @@
+ucimlrepo 
+scikit-learn 
+pyclustering 
+minisom 
+scikit-fuzzy
+fastapi
+uvicorn 
+aiofiles 
+python-multipart 
+jinja2
+pydantic
+pydantic-core
